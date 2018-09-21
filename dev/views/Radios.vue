@@ -5,9 +5,20 @@
       value="alpha" 
       label="alpha"/>
     <InputRadio 
+      v-model="val" 
+      disabled
+      value="alpha" 
+      label="alpha"/>
+    <InputRadio 
       v-model="val"
       value="beta" 
       label="beta"/>
+    <InputRadio 
+      v-model="val"
+      disabled
+      value="beta" 
+      label="beta"/>
+    {{ val }}
   </section>
 </template>
 
@@ -21,7 +32,7 @@ export default Vue.extend({
   },
   data(){
     return {
-      val:null,
+      val:"alpha",
       arr:['epsilon'],
       baseVal:false,
       baseArr:[]

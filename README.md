@@ -8,17 +8,17 @@ Fish Tank VueJS Component Module
 npm install @fishtank/fishtank-vue
 ```
 
-## Available Components
+## [Available Components](src/components/Readme.md)
 
-* Card - Card Style Layout Component
-* Modal - Modal Component
-* Buttons - Form Button Elements
-  * Primary
-  * Secondary
-  * Destructive
-* Radio
-* Switch
-* Text Input
+* [Cards](src/components/Card.md)
+* [Modals](src/components/Modals.md)
+* [Buttons](src/components/Buttons.md)
+* [Radios](src/components/Radios.md)
+* [Switches](src/components/Switches.md)
+* [Loaders](src/components/Loaders.md)
+* [Text Input](src/components/InputText.md)
+* [Checkboxes](src/components/Checkboxes.md)
+* [Tags](src/components/Tags.md)
 
 ## Usage
 
