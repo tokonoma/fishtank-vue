@@ -1,38 +1,50 @@
 <template>
   <section>
-    <InputRadio 
+    <FishTankCheckbox 
       v-model="val"
       value="alpha" 
       label="alpha"/>
-    <InputRadio 
+    <FishTankCheckbox 
       v-model="val" 
       disabled
       value="alpha" 
       label="alpha"/>
-    <InputRadio 
-      v-model="val"
+    <FishTankCheckbox 
+      v-model="val2"
       value="beta" 
       label="beta"/>
-    <InputRadio 
-      v-model="val"
+    <FishTankCheckbox 
+      v-model="val2"
       disabled
       value="beta" 
       label="beta"/>
-    {{ val }}
+    <code>{{ val }}</code>
+
+    <FishTankCheckbox 
+      v-model="baseArr"
+      value="alpha" 
+      label="alpha"/>
+    <FishTankCheckbox 
+      v-model="baseArr"
+      value="beta" 
+      label="beta"/>
+
+    <code>{{ baseArr }}</code>
   </section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import { InputRadio } from '@/index'
+import { FishTankCheckbox } from '@/index'
 
 export default Vue.extend({
   components:{
-    InputRadio,
+    FishTankCheckbox,
   },
   data(){
     return {
-      val:"alpha",
+      val:null,
+      val2:true,
       arr:['epsilon'],
       baseVal:false,
       baseArr:[]

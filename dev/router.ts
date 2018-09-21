@@ -37,6 +37,14 @@ export default new Router({
     {
       path: '/inputtext',
       component: () => import("./views/InputText.vue")
+    },
+    {
+      path: '/loaders',
+      component: () => import("./views/Loaders.vue")
+    },
+    {
+      path: '/checkboxes',
+      component: () => import("./views/Checkboxes.vue")
     }
     
   ]
