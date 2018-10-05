@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/bloombergbna/fishtank-vue/compare/v2.0.0...v3.0.0) (2018-10-03)
+
+
+### Features
+
+* Created button group component ([b42913f](https://github.com/bloombergbna/fishtank-vue/commit/b42913f))
+* Fish Tank Button Group component ([5ea0d3b](https://github.com/bloombergbna/fishtank-vue/commit/5ea0d3b))
+* Heavy refactor of removeable tags ([3868223](https://github.com/bloombergbna/fishtank-vue/commit/3868223))
+* moved accessibility global class script into an external mixin. ([ec7fab4](https://github.com/bloombergbna/fishtank-vue/commit/ec7fab4))
+* refactor of original tag supporting refactor work on removable tags. ([5787bc3](https://github.com/bloombergbna/fishtank-vue/commit/5787bc3))
+* Unit tests for Button group, and button group button ([909c466](https://github.com/bloombergbna/fishtank-vue/commit/909c466))
+* Button Featue Icon now working ([36f18fd](https://github.com/bloombergbna/fishtank-vue/commit/36f18fdfddf798cb91cd2cca4e81c868e9652a35))
+* Button Feature Label is now working ([0dd5664](https://github.com/bloombergbna/fishtank-vue/commit/0dd566486828062fca47f095868015f1e1af269d))
+* changes added to documentation ([289ec5b](https://github.com/bloombergbna/fishtank-vue/commit/289ec5bb3d498bbe85451784d49d5d46957e99b9))
+* added icons to button options using templates and slots ([d0850bf](https://github.com/bloombergbna/fishtank-vue/commit/d0850bf3ad008f9d02b9118b86f0aca803792f95))
+* links to mini fab options for FAB using props ([6e33d1f](https://github.com/bloombergbna/fishtank-vue/commit/6e33d1fb332933b88fff0a3e0336d92a949dce6d))
+* Developer focused docs for Button Group components ([ceff467](https://github.com/bloombergbna/fishtank-vue/commit/ceff467f9ca71c7d9cceacac4e9b8d802d922c0b))
+
+### BREAKING CHANGES
+
+* update to model binding structure of removeable tags
+docs: Created documentation for tags
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/bloombergbna/fishtank-vue/compare/v1.1.0...v2.0.0) (2018-09-20)
 

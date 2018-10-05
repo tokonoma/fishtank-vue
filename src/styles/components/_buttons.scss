@@ -1,14 +1,14 @@
 body.user-is-tabbing button:focus {
   box-shadow: 0 0 0 2px $color-selected;
 }
-
+.ft-baseButton{
+  @include baseButton();
+}
+.ft-baseButtonSm{
+  @include baseButtonSm();
+}
 .ft-button {
-  @include font-base-lg();
-  font-family: $font-primary;
-  font-weight: $fontweight-semi;
-
-  padding: 7px 11px 9px 11px;
-  height: $baseline*10;
+  @include baseButton();
   box-sizing: border-box;
 
   border-radius: 2px;
@@ -191,6 +191,10 @@ body.user-is-tabbing button:focus {
       background-color: $color-gray;
     }
   }
+  &:active {
+    background-color:rgba(0,0,0,0.3);
+    border-color: rgba(0,0,0,0.3);
+  }
 }
 .ft-button--outline {
   background-color: none;
@@ -211,6 +215,176 @@ body.user-is-tabbing button:focus {
 
     }
   }
+  &:active {
+    background-color: $color-gray-dark;
+    border-color: $color-gray-dark;
+  }
+}
+
+.ft-button--fab-wrapper{
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 49;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  border-color: $color-action;
+  background-color: none;
+  text-align: center;
+
+  .ft-button--fab{
+    position: relative;
+    z-index: 50;
+    background-color: $color-black;
+    border-image: transparent;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    font-size: 6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+  
+    &:hover{
+      transform: scale(1.15);
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+    }
+  }
+  
+  svg{
+    fill : $color-white;
+  }
+
+  &:hover ul{
+    transition: 0.3s;
+    bottom: 50px;
+    opacity: 1;
+
+  }
+  &:hover ul li p{
+      right: 70px;
+      opacity: 1;
+      transition: 0.3s ease-in;
+  }
+
+  p, a{
+    text-decoration: none;
+    color: $color-white;
+  }
+
+  ul{
+    opacity: 0;
+    list-style-type: none;
+    padding: 0px;
+    width: 100%;
+    position: absolute;
+    z-index: 49;
+    bottom: 0px;
+    margin-bottom: 0;
+    padding-bottom: 12px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.15s ease-in-out;
+  }
+
+  li{
+    background: $color-gray;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    position: relative;
+
+    font-size: 2em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+      transform: scale(1.15);
+    }
+
+    svg{
+      align-self: center;
+    }
+
+    a{
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    p{
+      opacity: 0;
+      color: $color-black;
+      font-size: 0.5em;
+      position: absolute;
+      z-index: 499;
+      right: 0px;
+      top: -12px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: center;
+      text-align: left;
+    }
+  }
+}
+
+.ft-button--feature-label{
+  padding: 0px ;
+  margin: 0px;
+  height: 100%;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 4px;
+  color: $color-gray;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  &:hover{
+    color: $color-black;
+    background-color: $color-gray-lightest;
+    svg {
+      fill: $color-black;
+    }
+  }
+  &:active{
+    color: $color-black;
+    background-color: $color-secondary-darker;
+  }
+  &:disabled{
+    color: $color-gray-lighter;
+    background: transparent;
+  }
+
+  p{
+    margin:  0px;
+    padding: 0px 4px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+    line-height: 20px;
+  }
+  
+  
 }
 
 .ft-button--outline-dark {
@@ -231,7 +405,24 @@ body.user-is-tabbing button:focus {
       background-color: transparent;
     }
   }
+  &:active {
+    background-color: $color-secondary-darker;
+    border-color: $color-secondary-darker;
+  }
 }
+
+
+.ft-button--outline-small{
+  height: 24px;
+  border-width: 1px;
+  padding: 1px 8px 2px 8px;
+  line-height: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  text-align: center;
+}
+
 
 .hvr-grow {
     display: inline-block;
